@@ -32,4 +32,4 @@ steps:
     azureSubscription: 'Free Trial (277c3858-8ed8-474e-8003-045a9e1866a4)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: "az storage blob upload-batch —-account-name myazurestaticwebapp --account-key a0LQCaX3J9qu6Xin7zf6lPSbdNKaNQ3UqcktT7G6LAEehRHSsHQJDm4AemRzRUS22hI2wqHB+Nke8SPTZsKgpQ== —d '$web' —s $(Build.binariesDirectory)"
+    inlineScript: "az storage blob upload-batch —-account-name myazurestaticwebapp --account-key a0LQCaX3J9qu6Xin7zf6lPSbdNKaNQ3UqcktT7G6LAEehRHSsHQJDm4AemRzRUS22hI2wqHB+Nke8SPTZsKgpQ== --destination '$web'--source $(Build.binariesDirectory)"
