@@ -23,9 +23,10 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'publish build artifacts'
   inputs:
-    PathtoPublish: '$(Build.binariesDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
     ArtifactName: 'WEB'
     publishLocation: 'Container'
+    
 - task: AzureCLI@2
   displayName: 'azure CLI'
   inputs:
