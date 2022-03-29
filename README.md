@@ -1,3 +1,7 @@
+# Web App Service Deployment with Azure Container Registry.
+
+Added CICD from GIt Actions, And Container Deployment.
+
 # Webapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
