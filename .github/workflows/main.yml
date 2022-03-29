@@ -25,3 +25,8 @@ jobs:
         npm run build
         docker build . -t angularwebappcontainer.azurecr.io/webapp:${{ github.sha }}
         docker push angularwebappcontainer.azurecr.io/webapp:${{ github.sha }}
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'webapp4562'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        images: 'angularwebappcontainer.azurecr.io/webapp:${{ github.sha }}'
