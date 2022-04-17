@@ -28,4 +28,4 @@ steps:
     inlineScript: |
       az storage blob delete-batch --account-name devwebapp --source webapp
       $key = az storage account keys list -g AZACR -n devwebapp --query [0].value -o tsv
-      az storage blob upload-batch -s dist/ -d webapp --account-name devwebapp --account-key $key
+      az storage blob upload-batch -s dist/webapp -d webapp --account-name devwebapp --account-key $key
