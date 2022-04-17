@@ -29,5 +29,5 @@ steps:
       az storage blob upload \
           --account-name devwebapp \
           --container-name webapp \
-          --name  \*
-          --file  \*
+          --name \webapp \
+          --file .\dist\webapp\* \
