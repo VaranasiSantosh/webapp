@@ -27,4 +27,4 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       $key = az storage account keys list -g AZACR -n devwebapp --query [0].value -o tsv
-      az storage blob upload-batch -s ./dist/webaapp -d 'webapp' --account-name devwebapp --account-key $key
+      az storage blob upload-batch -s . -d webapp --account-name devwebapp --account-key $key
